@@ -6,8 +6,9 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
     // set, map are data structure
+    // log2(n) and log(n) are same for algorithm for all 
     
-    // in set elements are in unique and sorted form. push, access, erase element all takes O(log2(n))
+    // in set elements are in unique and sorted form. push, access, erase element all takes O(log2(n)) / O(log(n)) same thing 
     // set<int> s = {1, 1, 3, 2, 3, 2};
     // cout << s.size() << '\n';
     // for(auto u : s) cout << u << " ";
@@ -128,8 +129,8 @@ int main() {
 
     // // you are using find, which has a time complexity of O(n), where n is the number of elements in the set. Since you're using 
     // // a set data structure, which provides O(log n) complexity for search operations, using find is inefficient.
-    // // if (find(result.begin(), result.end(), n) == result.end()) { // avoid using with sets
-    // if (result.find(6) == result.end()) {
+    // // if (find(result.begin(), result.end(), n) == result.end()) { // avoid using with sets. Use the below thing:
+    // if (result.find(6) == result.end()) { // also can use because it will return 1 for set alaways so true if yes: if (s.count(6)) 
     //     cout << "No\n";
     // } else {
     //     cout << "Yes\n";
@@ -141,24 +142,78 @@ int main() {
 
  
     // Limitation of set
-    set<int> a = {3, 4, 1, 2, 1, 1}; // 1 2 3 4
+    // set<int> a = {3, 4, 1, 2, 1, 1}; // 1 2 3 4
 
     // cout << a[2] << '\n'; // error - cann't access value using index in set
     // for(int i = 0; i < a.size(); i++) cout << a[i] << '\n'; // error, same like before
 
     // for(auto u : a) cout << u << '\n'; // can use this
 
-    cout << *a.begin() << '\n'; // can print the second
+    // cout << *a.begin() << '\n'; // can print the second
 
     // To print ony the 3rd element
-    int p, c = 0;
-    for(auto u : a) {
-        if (c == 3) break;
-        p = u;
-        c++;
-    }
-    cout << p << '\n';
+    // int p, c = 0;
+    // for(auto u : a) {
+    //     if (c == 3) break;
+    //     p = u;
+    //     c++;
+    // }
+    // cout << p << '\n';
 
+    // cout << *(++(++a.begin())) << '\n'; // more shortcut to print the 3rd element
+    // cout << *(++(++(++a.begin()))) << '\n'; // to print the 3rd element
+    // Formula: If you need nth element then use (n - 1) number of "++". Suppose for 3rd element we used *(++(++a.begin())) "++" = used twice
+
+    // To print the second last element of set
+    // cout << *(--(--a.end())) << '\n';
+
+    // difference between set and multiset: set unique and sorted but multiset sorted but not unique.
+    // multiset also same complexity 0(log2(n)) / O(log(n)). Function same for both
+    multiset<int> s;
+
+    s.insert(1);
+    s.insert(2);
+    s.insert(1);
+    s.insert(3);
+    s.insert(1);
+    s.insert(4);
+    s.insert(1);
+    s.insert(4);
+
+    // cout << s.size() << '\n';
+    // for(auto u : s) cout << u << " ";
+    // cout << '\n';
+
+    // cout << s.count(1) << '\n';
+
+    // s.erase(1); // in set, elements are unique, so using this function will delete only one 1 but here, multiset will all occurence of 1
+    // for(auto u : s) cout << u << " ";
+    // cout << '\n';
+
+
+    // To delete only one 1, then: 
+    // auto it = s.find(1); // first occurrence of 1.
+    // s.erase(it); 
+
+    // for(auto u : s) cout << u << " ";
+    // cout << '\n';
+
+
+    // Conclusion:
+    // set - unique and sorted
+    // unordered_set - unique [Tips: both have 'u' at the beginning]
+    // multiset - sorted
+    set<int> a = {5, 2, 3, 1, 5, 2, 4};
+    for(auto u : a) cout << u << ' ';
+    cout << '\n';
+
+    unordered_set<int> a1 = {5, 2, 3, 1, 5, 2, 4};
+    for(auto u : a1) cout << u << ' ';
+    cout << '\n';
+
+    multiset<int> a2 = {5, 2, 3, 1, 5, 2, 4};
+    for(auto u : a2) cout << u << ' ';
+    cout << '\n';
 
 
     return 0;
