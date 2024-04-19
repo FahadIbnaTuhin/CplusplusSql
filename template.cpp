@@ -49,6 +49,8 @@ int dy[] = {+1, -1, 0, 0};
 //int dx[] = {+1, 0, -1, 0, +1, +1, -1, -1}; 
 //int dy[] = {0, +1, 0, -1, +1, -1, +1, -1}; 
 
+
+// Debugger
 template < typename F, typename S > 
 ostream& operator << ( ostream& os, const pair< F, S >&p) { 
     return os << "(" << p.first << ", " << p.second << ")";
@@ -117,5 +119,6 @@ int main()
     optimize();
     
     
+
     return 0;
 }
