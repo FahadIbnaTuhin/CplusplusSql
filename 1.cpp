@@ -69,6 +69,5 @@ int main() {
         v.pop();
     }
     
-
     return 0;
 }
