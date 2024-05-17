@@ -20,17 +20,25 @@ int main() {
     // a.first = 10;
     // a.second = 15;
  
-    // pair<string, vector<int>> p;
-    // p.first = "fahad";
-    // p.second = {1, 2, 3};
 
-    // cout << p.first << '\n';
+    // pair<string, vector<int>> p;
+    // pair<string, vector<int>> p;
+    // p.first = "Fahad";
+
+    // p.second = {5, 2, 1, 6};
+
+    // // p.second.push_back(1);
+    // // p.second.push_back(10);
+    // // p.second.push_back(15);
+
+    // cout << "HI" << '\n'; // debug to see how it store something
+
     // for(auto u : p.second) cout << u << ' ';
     // cout << '\n';
 
     // pair<int, int> p;
     // // p = make_pair(2, 3); // can use make_pair to store something inside p pair directly
-    // p = {2, 3}; // can also use this
+    // p = {2, 3}; // can also use this BEST!!
     // p.first++;
     // cout << p.first << " " << p.second << '\n';
 

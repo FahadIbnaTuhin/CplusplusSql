@@ -94,10 +94,11 @@ int main() {
     // int cnt[123];
     // cnt[5] = 10; // for modifing and accessing, time complexity O(1) - constant time
 
-    // but map sorted the key and retrive the key when you modify or access, so time complexity
+    // O(log2(n)) / O(log(n)) same thing
+    // but map sorted the key and retrive the key when you modify or access, so time complexity.
     // map<string, int> id;
     // id["shahriar"] = 20; // O(log2(n))
-    // cout << id["shahriar"] << '\n'; // O(log2(n))
+    // cout << id["shahriar"] << '\n'; // O(log2(n)) / O(log(n)) same thing
 
 
     // map<int, bool> vis;
@@ -123,12 +124,24 @@ int main() {
 
 
     // vector<map<string, int>> v; // vector of map
-    
-    // map<string, int> c;
-    // c["fahad"] = 1;
-    // v.push_back(c);
 
-    // cout << v[0]["fahad"] << '\n';
+    // map<string, int> m;
+    // m["bd"] = 20;
+    // m["Is"] = 54;
+    // v.push_back(m);
+
+    // map<string, int> k;
+    // k["ajim"] = 20;
+    // k["bidak"] = 15;
+    // v.push_back(k);
+
+    // cout << v[1]["ajim"] << '\n';
+
+    // for(auto u : v) {
+    //     for(auto r : u) {
+    //         cout << r.first << ' ' << r.second << '\n';
+    //     }
+    // }
 
 
     // unique: maps keys are always distinct, so the size of map will be the number of distinct elements here
@@ -139,8 +152,6 @@ int main() {
     // c[3] = 2; // the updated so, c[3] values will be change from 1 to 2
 
     // cout << c.size() << '\n';
-
-
 
     return 0;
 }
