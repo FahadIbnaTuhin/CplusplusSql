@@ -9,4 +9,4 @@ int main() {
 }
 
 // 5 4 3
-// 1h 6min
+// 57min
