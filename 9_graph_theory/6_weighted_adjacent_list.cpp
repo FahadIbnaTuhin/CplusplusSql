@@ -19,7 +19,7 @@ int main() {
     // To show the output: 
     for (int i = 1; i <= n; i++) { 
         cout << "Adjacent list of " << i << ": ";
-        for (auto u : adj[i]) cout << "Node: " << u.first << " And cost: " << u.second << " ";
+        for (auto u : adj[i]) cout << "Node: " << u.first << " And cost: " << u.second << " | ";
         cout << '\n';
     }
 

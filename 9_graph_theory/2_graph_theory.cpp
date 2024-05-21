@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Node: City & Edge: Road
-    // From one node, if you can go other node directly, then these are called adjcent 
+    // From one node, if you can go other node directly, then these are called adjacent 
 
     // Direct Edge: Can go only one direction. Can't go opposite. Like One Way Highway
     // Undirect Edge: Opposite of Direct Edge. 
@@ -16,10 +16,10 @@ int main() {
     // Starting from one node, and after going through a lot of path cyclically if you come
     // to the starting node, then it is called cyclic graph. Number of nodes you went through 
     // will be the length of the cycle. REMEMBER, it won't cycle if you visit any node twice(exclude the root/starting node)
-    // to be a cycle, minimum 2 edges will need. If you go 1 to 2 and come 2 to 1, then it is not cycle
+    // to be a cycle, minimum 2 edges will need. If you go from 1 to 2 and come from 2 to 1, then it is not cycle
     // It's called Backage
     
-    // You cann't say if you go one node to his adjcnet and come back it will be 2 length cyclic, as you go through 2 node
+    // You cann't say if you go one node to his adjacent and come back it will be 2 length cyclic, as you go through 2 node
 
     // In Connected graph, every node is connected with each other such a way that everyone can visit directly or 
     // indirectly but visiting is possible. 
@@ -37,7 +37,7 @@ int main() {
 
     // Degree of a node will be always root. And the number of child it has is the degree of 
     // this node. Degree of a node can have his parent, but when we will try to find out his degree,
-    // we have to consider it as the root and this roots number of adjcent child will be the degree of this node
+    // we have to consider it as the root and this roots number of adjacent child will be the degree of this node
 
     // End nodes of Tree, that has no child is called Leaf. Every Leafs degree is 1
 
@@ -48,7 +48,7 @@ int main() {
 
     // If two nodes parents are same, then they are siblings of one another
 
-    // Root always 0 lavel. Suppose, root has 2 adjcnet child, so these 2 child will be in 1 level and so on.
+    // Root always 0 lavel. Suppose, root has 2 adjacent child, so these 2 child will be in 1 level and so on.
     // First 0lvel, 1 level , 2 level, ..............  
     // Highest Level is the height of a tree
 

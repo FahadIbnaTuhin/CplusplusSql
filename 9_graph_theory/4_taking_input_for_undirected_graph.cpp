@@ -3,7 +3,7 @@
 using namespace std;
 
 const int mx = 1e5+123;
-vector<int> adj[mx] = {};
+vector<int> adj[mx];
 
 int main() {
     // n number of nodes & m number of edges will be given
@@ -24,6 +24,8 @@ int main() {
     }
 
     // Inside graph, to access adjacent list, using "for each" loop is useful. Can use
+
+    // Space Complexity of Adj Mat: O(n + m)
 
     return 0;
 }

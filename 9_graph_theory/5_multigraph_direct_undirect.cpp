@@ -10,7 +10,7 @@ int main() {
     // a[1][3] = 3; // 3 edges exist
     // a[1][2] = 0; // no edges or can't go
 
-    // in weighted multi graph, we can't use adjacent matrix
+    // in weighted multi graph, we can't use adjacent matrix. Have to use adj list 
 
 
     return 0;
