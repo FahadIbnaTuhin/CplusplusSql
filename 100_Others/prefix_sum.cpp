@@ -38,9 +38,12 @@ void solve2() {
     }
 
     while (q--) {
-        ll a, b; cin >> a >> b;
-
-        cout << prefix_sum[b] - prefix_sum[a - 1] << '\n';
+        ll a, b; cin >> a >> b; // 0-indexed
+        cout << prefix_sum[b + 1] - prefix_sum[a] << '\n'; // follow this
+        
+        // ll a, b; cin >> a >> b; // 1-indexed
+        // cout << prefix_sum[b] - prefix_sum[a - 1] << '\n'; // just subtract 1 from both
+        
     }
 }
 // TC: O(n + q)
