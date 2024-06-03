@@ -8,4 +8,4 @@ int main() {
     return 0;
 }
 
-// 32
+// Greedy 48
